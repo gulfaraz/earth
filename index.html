@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        <title>Planet Earth</title>
+        <script src="/cesium/Build/Cesium/Cesium.js"></script>
+        <style>
+            @import url(/cesium/Build/Cesium/Widgets/widgets.css);
+
+            @font-face {
+                font-family: gulfaraz;
+                src: local("font"),
+                    url(font);
+                font-weight: bold;
+            }
+            html, body, #cesiumContainer {
+                width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
+            }
+            #creditContainer {
+                visibility: hidden;
+            }
+            #title {
+                color: white;
+                font-family: "gulfaraz";
+                font-size: 200%;
+                position: absolute;
+                top: 0;
+                padding: 7%;
+                user-select: none;
+                cursor: default;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="cesiumContainer"></div>
+        <div id="title">GULFARAZ</div>
+        <div id="creditContainer"></div>
+        <script>
+            var viewer = new Cesium.Viewer("cesiumContainer", {
+                animation: false,
+                baseLayerPicker: false,
+                fullscreenButton: false,
+                geocoder: false,
+                homeButton: false,
+                infoBox: false,
+                sceneModePicker: false,
+                selectionIndicator: false,
+                timeline: false,
+                navigationHelpButton: false,
+                navigationInstructionsInitiallyVisible: false,
+                creditContainer: "creditContainer"
+            });
+
+            viewer.scene.screenSpaceCameraController.enableRotate = false;
+            viewer.scene.screenSpaceCameraController.enableTranslate = false;
+            viewer.scene.screenSpaceCameraController.enableZoom = false;
+            viewer.scene.screenSpaceCameraController.enableTilt = false;
+            viewer.scene.screenSpaceCameraController.enableLook = false;
+            viewer.scene.camera.rotateUp(0.2);
+            setInterval(function () {
+                viewer.scene.camera.rotateRight(0.0001);
+            }, 1);
+        </script>
+    </body>
+</html>

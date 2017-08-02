@@ -1,0 +1,27 @@
+{
+  "name": "earth",
+  "version": "1.0.0",
+  "description": "Information related to Earth",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "earth",
+    "data",
+    "map",
+    "globe",
+    "global",
+    "gulfaraz"
+  ],
+  "author": "Gulfaraz",
+  "license": "MIT",
+  "dependencies": {
+    "cesium": "^1.35.2",
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
