@@ -19,7 +19,8 @@
   "license": "MIT",
   "dependencies": {
     "cesium": "^1.35.2",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "serve-index": "^1.9.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1"
