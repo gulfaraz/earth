@@ -1,0 +1,30 @@
+{
+  "defaults": {
+    "store": {
+      "module": "greenlock-store-fs",
+      "basePath": "./greenlock.d"
+    },
+    "challenges": {
+      "dns-01": {
+        "token": "2d3606b201475f0c08201ceb83b3787addc91041b0d9ddbc140bc105a17808be",
+        "module": "acme-dns-01-digitalocean"
+      }
+    },
+    "renewOffset": "-45d",
+    "renewStagger": "3d",
+    "accountKeyType": "EC-P256",
+    "serverKeyType": "RSA-2048",
+    "subscriberEmail": "gulfarazyasin@gmail.com",
+    "agreeToTerms": true
+  },
+  "sites": [
+    {
+      "subject": "gulfaraz.com",
+      "altnames": [
+        "gulfaraz.com",
+        "www.gulfaraz.com"
+      ],
+      "renewAt": 1579992309909
+    }
+  ]
+}
